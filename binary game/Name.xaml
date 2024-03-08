@@ -1,0 +1,18 @@
+﻿<Window x:Class="binary_game.Name"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:binary_game"
+        mc:Ignorable="d"
+        Title="Name" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/ice-cream-seamless-pattern-cone-chocolate-vanilla-isolated-background-wallpaper-vector.jpg"/>
+        </Grid.Background>
+        <TextBox x:Name="name_input" HorizontalAlignment="Center" Margin="0,187,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="188" FontSize="36" BorderBrush="#FF1A46CA" Background="#FFF0D8F7" Height="55"/>
+        <Label Content="Please enter your name!" HorizontalAlignment="Left" Margin="217,87,0,0" VerticalAlignment="Top" FontSize="36" Foreground="#FF460167"/>
+        <Button x:Name="name_submit" Content="Submit" Click="name_submit_Click" HorizontalAlignment="Center" Margin="0,264,0,0" VerticalAlignment="Top" FontSize="24"/>
+
+    </Grid>
+</Window>

@@ -10,10 +10,10 @@
         <Grid.Background>
             <ImageBrush ImageSource="/1600w-D1HaFKd6PGI.jpg"/>
         </Grid.Background>
-        <Button Content="Start" HorizontalAlignment="Center" Margin="0,189,0,0" VerticalAlignment="Top" Height="46" Width="96"/>
+        <Button x:Name="start_btn" Content="Start" Click="start_btn_Click" HorizontalAlignment="Center" Margin="0,189,0,0" VerticalAlignment="Top" Height="46" Width="96" Background="#FFF5D4F5"/>
         <Label Content="Welcome to 8-bit binary Game!" HorizontalAlignment="Center" Margin="0,111,0,0" VerticalAlignment="Top" FontSize="24" Background="#FFF5B8B8"/>
-        <Button Content="Leaderboard" HorizontalAlignment="Center" Margin="0,253,0,0" VerticalAlignment="Top" Height="46" Width="96"/>
-        <Button Content="Exit" HorizontalAlignment="Center" Margin="0,316,0,0" VerticalAlignment="Top" Height="46" Width="96"/>
+        <Button x:Name="ldb_btn" Content="Leaderboard" Click="ldb_btn_Click" HorizontalAlignment="Center" Margin="0,253,0,0" VerticalAlignment="Top" Height="46" Width="96" Background="#FFF5D4F5"/>
+        <Button x:Name="exit_btn" Content="Exit" Click="exit_btn_Click" HorizontalAlignment="Center" Margin="0,316,0,0" VerticalAlignment="Top" Height="46" Width="96" Background="#FFD0B4D0"/>
 
     </Grid>
 </Window>

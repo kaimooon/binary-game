@@ -81,8 +81,15 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Name.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Name.xaml.cs">
+      <DependentUpon>Name.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -116,6 +123,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="illustration-ice-cream-cone-decorated-pink-cafe-with-white-frame-board-background-3d-style_62298-683.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="e0287b2e47bc1b3ef0fa009abb8ac2b3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ice-cream-seamless-pattern-cone-chocolate-vanilla-isolated-background-wallpaper-vector.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
