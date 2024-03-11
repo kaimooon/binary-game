@@ -93,7 +93,7 @@ namespace binary_game
                                 tenth_place_score.Content = parts[1];
                                 tenth_place_pt.Content = parts[2];
                                 break;
-                                // Add cases for other places if needed
+                                
                         }
                     }
                 }

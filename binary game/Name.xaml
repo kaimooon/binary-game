@@ -12,7 +12,7 @@
         </Grid.Background>
         <TextBox x:Name="name_input" HorizontalAlignment="Center" Margin="0,187,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="188" FontSize="36" BorderBrush="#FF1A46CA" Background="#FFF0D8F7" Height="55"/>
         <Label Content="Please enter your name!" HorizontalAlignment="Left" Margin="217,87,0,0" VerticalAlignment="Top" FontSize="36" Foreground="#FF460167"/>
-        <Button x:Name="name_submit" Content="Submit" Click="name_submit_Click" HorizontalAlignment="Center" Margin="0,264,0,0" VerticalAlignment="Top" FontSize="24"/>
+        <Button x:Name="name_submit" Content="Submit" Click="name_submit_Click" HorizontalAlignment="Center" Margin="0,264,0,0" VerticalAlignment="Top" FontSize="24" Background="#FFD05FF3"/>
 
     </Grid>
 </Window>

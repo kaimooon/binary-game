@@ -26,15 +26,15 @@
         <Label Content="4" HorizontalAlignment="Left" Margin="496,201,0,0" VerticalAlignment="Top" FontSize="24"/>
         <Label Content="2" HorizontalAlignment="Left" Margin="553,201,0,0" VerticalAlignment="Top" FontSize="24"/>
         <Label Content="1" HorizontalAlignment="Left" Margin="610,201,0,0" VerticalAlignment="Top" FontSize="24"/>
-        <Button x:Name="_128_btn" Content="^" HorizontalAlignment="Left" Margin="135,302,0,0" VerticalAlignment="Top" Width="30" Height="30" FontSize="24" Click="_128_btn_Click"/>
-        <Button x:Name="_64_btn" Content="^" HorizontalAlignment="Left" Margin="191,302,0,0" VerticalAlignment="Top" Width="30" Height="30" FontSize="24" Click="_64_btn_Click"/>
-        <Button x:Name="_32_btn" Content="^" HorizontalAlignment="Left" Margin="249,302,0,0" VerticalAlignment="Top" Width="30" Height="30" FontSize="24" Click="_32_btn_Click"/>
-        <Button x:Name="_16_btn" Content="^" HorizontalAlignment="Left" Margin="307,302,0,0" VerticalAlignment="Top" Width="30" Height="30" FontSize="24" Click="_16_btn_Click"/>
-        <Button x:Name="_8_btn" Content="^" HorizontalAlignment="Left" Margin="436,302,0,0" VerticalAlignment="Top" Width="30" Height="30" FontSize="24" Click="_8_btn_Click"/>
-        <Button x:Name="_4_btn" Content="^" HorizontalAlignment="Left" Margin="492,302,0,0" VerticalAlignment="Top" Width="30" Height="30" FontSize="24" Click="_4_btn_Click"/>
-        <Button x:Name="_2_btn" Content="^" HorizontalAlignment="Left" Margin="549,302,0,0" VerticalAlignment="Top" Width="30" Height="30" FontSize="24" Click="_2_btn_Click"/>
-        <Button x:Name="_1_btn" Content="^" HorizontalAlignment="Left" Margin="606,302,0,0" VerticalAlignment="Top" Width="30" Height="30" FontSize="24" Click="_1_btn_Click"/>
-        <Button x:Name="submit_btn" Content="Submit" HorizontalAlignment="Left" Margin="355,350,0,0" VerticalAlignment="Top" FontSize="22" Click="submit_btn_Click"/>
+        <Button x:Name="_128_btn" Content="^" HorizontalAlignment="Left" Margin="135,302,0,0" VerticalAlignment="Top" Width="30" Height="30" FontSize="24" Click="_128_btn_Click" Background="#FF7F8AE2"/>
+        <Button x:Name="_64_btn" Content="^" HorizontalAlignment="Left" Margin="191,302,0,0" VerticalAlignment="Top" Width="30" Height="30" FontSize="24" Click="_64_btn_Click" Background="#FF7F8AE2"/>
+        <Button x:Name="_32_btn" Content="^" HorizontalAlignment="Left" Margin="249,302,0,0" VerticalAlignment="Top" Width="30" Height="30" FontSize="24" Click="_32_btn_Click" Background="#FF7F8AE2"/>
+        <Button x:Name="_16_btn" Content="^" HorizontalAlignment="Left" Margin="307,302,0,0" VerticalAlignment="Top" Width="30" Height="30" FontSize="24" Click="_16_btn_Click" Background="#FF7F8AE2"/>
+        <Button x:Name="_8_btn" Content="^" HorizontalAlignment="Left" Margin="436,302,0,0" VerticalAlignment="Top" Width="30" Height="30" FontSize="24" Click="_8_btn_Click" Background="#FF7F8AE2"/>
+        <Button x:Name="_4_btn" Content="^" HorizontalAlignment="Left" Margin="492,302,0,0" VerticalAlignment="Top" Width="30" Height="30" FontSize="24" Click="_4_btn_Click" Background="#FF7F8AE2"/>
+        <Button x:Name="_2_btn" Content="^" HorizontalAlignment="Left" Margin="549,302,0,0" VerticalAlignment="Top" Width="30" Height="30" FontSize="24" Click="_2_btn_Click" Background="#FF7F8AE2"/>
+        <Button x:Name="_1_btn" Content="^" HorizontalAlignment="Left" Margin="606,302,0,0" VerticalAlignment="Top" Width="30" Height="30" FontSize="24" Click="_1_btn_Click" Background="#FF7F8AE2"/>
+        <Button x:Name="submit_btn" Content="Submit" HorizontalAlignment="Left" Margin="355,350,0,0" VerticalAlignment="Top" FontSize="22" Click="submit_btn_Click" Background="#FF3247F1"/>
         <Label x:Name="timer_label" Content="0" HorizontalAlignment="Left" Margin="377,45,0,0" VerticalAlignment="Top" FontSize="36" Foreground="#FFE81F1F"/>
         <Label x:Name="given_num" Content="0" HorizontalAlignment="Left" Margin="377,152,0,0" VerticalAlignment="Top" Background="#FF9AECE2" FontSize="36" Foreground="#FF3731EF"/>
 
