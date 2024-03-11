@@ -38,6 +38,7 @@ namespace binary_game
         private int currentBinaryValue;
         private DispatcherTimer gameTimer;
         private string playerName;
+        
 
         public Game(string playerName)
         {
@@ -48,6 +49,7 @@ namespace binary_game
 
         public void InitializeGame()
         {
+            
             score = 0;
             timerInterval = 40; // Set the initial timer interval
             gameTimer = new DispatcherTimer();
@@ -62,23 +64,10 @@ namespace binary_game
         {
             Random rnd = new Random();
             randomNumber = rnd.Next(0, 256);
-            given_num.Content = randomNumber.ToString();
-            //ResetBinaryInputs();
+            given_num.Content = randomNumber.ToString();        
         }
 
-        //private void ResetBinaryInputs()
-        //{
-        //    currentBinaryValue = 0;
-        //    // Resetting binary input text boxes and buttons
-        //    _128_btn.Content = "0";
-        //    _64_btn.Content = "0";
-        //    _32_btn.Content = "0";
-        //    _16_btn.Content = "0";
-        //    _8_btn.Content = "0";
-        //    _4_btn.Content = "0";
-        //    _2_btn.Content = "0";
-        //    _1_btn.Content = "0";
-        //}
+ 
 
         private void GameTimer_Tick(object sender, EventArgs e)
         {
@@ -120,28 +109,151 @@ namespace binary_game
             }
         }
 
-        private void BinaryButton_Click(object sender, RoutedEventArgs e)
+        private void _1_btn_Click(object sender, RoutedEventArgs e)
         {
-            Button button = sender as Button;
-            int value = int.Parse(button.Content.ToString());
-            currentBinaryValue ^= value; // Toggle the bit value
-            button.Content = currentBinaryValue == value ? "1" : "0";
-        }
-
-        private void SubmitButton_Click(object sender, RoutedEventArgs e)
-        {
-            if (currentBinaryValue == randomNumber)
+            if (btn1.Text == "0")
             {
-                score++;
-                timerInterval -= 2; // Reduce time for next round
-                if (timerInterval <= 20) // Cap the minimum interval
-                    timerInterval = 20;
-                gameTimer.Interval = TimeSpan.FromSeconds(timerInterval);
-                GenerateRandomNumber(); // Generate a new random number
+                btn1.Text = "1";
+                _1_add = 1;
             }
             else
             {
-                MessageBox.Show("Incorrect! Try again.");
+                btn1.Text = "0";
+                _1_add = 0;
+            }
+        }
+        private void _2_btn_Click(object sender, RoutedEventArgs e)
+        {
+            if (btn2.Text == "0")
+            {
+                btn2.Text = "1";
+                _2_add = 2;
+            }
+            else
+            {
+                btn2.Text = "0";
+                _2_add = 0;
+            }
+        }
+
+        private void _4_btn_Click(object sender, RoutedEventArgs e)
+        {
+            if (btn4.Text == "0")
+            {
+                btn4.Text = "1";
+                _4_add = 4;
+            }
+            else
+            {
+                btn4.Text = "0";
+                _4_add = 0;
+            }
+        }
+
+        private void _8_btn_Click(object sender, RoutedEventArgs e)
+        {
+            if (btn8.Text == "0")
+            {
+                btn8.Text = "1";
+                _8_add = 8;
+            }
+            else
+            {
+                btn8.Text = "0";
+                _8_add = 0;
+            }
+        }
+
+        private void _16_btn_Click(object sender, RoutedEventArgs e)
+        {
+            if (btn16.Text == "0")
+            {
+                btn16.Text = "1";
+                _16_add = 16;
+            }
+            else
+            {
+                btn16.Text = "0";
+                _16_add = 0;
+            }
+        }
+
+        private void _32_btn_Click(object sender, RoutedEventArgs e)
+        {
+            if (btn32.Text == "0")
+            {
+                btn32.Text = "1";
+                _32_add = 32;
+            }
+            else
+            {
+                btn32.Text = "0";
+                _32_add = 0;
+            }
+        }
+
+        private void _64_btn_Click(object sender, RoutedEventArgs e)
+        {
+            if (btn64.Text == "0")
+            {
+                btn64.Text = "1";
+                _64_add = 64;
+            }
+            else
+            {
+                btn64.Text = "0";
+                _64_add = 0;
+            }
+        }
+
+        private void _128_btn_Click(object sender, RoutedEventArgs e)
+        {
+            if (btn128.Text == "0")
+            {
+                btn128.Text = "1";
+                _128_add = 128;
+            }
+            else
+            {
+                btn128.Text = "0";
+                _128_add = 0;
+            }
+        }
+
+        private void submit_btn_Click(object sender, RoutedEventArgs e)
+        {
+            int button_1 = _1_add;
+            int button_2 = _2_add;
+            int button_4 = _4_add;
+            int button_8 = _8_add;
+            int button_16 = _16_add;
+            int button_32 = _32_add;
+            int button_64 = _64_add;
+            int button_128 = _128_add;
+            int results = button_1 + button_2 + button_4 + button_8 + button_16 + button_32 + button_64 + button_128;
+
+            if (results.ToString() == given_num.Content.ToString())
+            {
+                gameTimer.Stop();
+                MessageBox.Show("Correct");
+                //start_btn.IsEnabled = true;
+                submit_btn.IsEnabled = false;
+                _sec = 30;
+                timer_label.Content = _sec.ToString();
+
+                btn1.Text = "0";
+                btn2.Text = "0";
+                btn4.Text = "0";
+                btn8.Text = "0";
+                btn16.Text = "0";
+                btn32.Text = "0";
+                btn64.Text = "0";
+                btn128.Text = "0";
+                given_num.Content = "x";
+            }
+            else
+            {
+                MessageBox.Show("Incorrect");
             }
         }
     }

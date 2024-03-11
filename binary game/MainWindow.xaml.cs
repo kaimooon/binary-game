@@ -31,6 +31,7 @@ namespace binary_game
             Name nameWindow = new Name();
             nameWindow.PlayerNameSubmitted += NameWindow_PlayerNameSubmitted;
             nameWindow.ShowDialog();
+            start_btn.IsEnabled = false;
         }
 
         private void NameWindow_PlayerNameSubmitted(object sender, string playerName)
