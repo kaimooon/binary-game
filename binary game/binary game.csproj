@@ -130,5 +130,17 @@
   <ItemGroup>
     <Resource Include="ice-cream-seamless-pattern-cone-chocolate-vanilla-isolated-background-wallpaper-vector.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTExL3JtNjA0LWVsZW1lbnQtMDg3OC5wbmc.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTExL3JtNjA0LWVsZW1lbnQtMDg3OC5wbmc-removebg-preview.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTExL3JtNjA0LWVsZW1lbnQtMDg3OC5wbmc-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ice_cream-removebg-preview.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

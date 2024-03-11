@@ -113,11 +113,13 @@ namespace binary_game
         {
             if (btn1.Text == "0")
             {
+                empty_cone_8.Source = new BitmapImage(new Uri("/ice_cream-removebg-preview.png", UriKind.RelativeOrAbsolute));
                 btn1.Text = "1";
                 _1_add = 1;
             }
             else
             {
+                empty_cone_8.Source = new BitmapImage(new Uri("/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTExL3JtNjA0LWVsZW1lbnQtMDg3OC5wbmc-removebg-preview.png", UriKind.RelativeOrAbsolute));
                 btn1.Text = "0";
                 _1_add = 0;
             }
@@ -126,11 +128,13 @@ namespace binary_game
         {
             if (btn2.Text == "0")
             {
+                empty_cone_7.Source = new BitmapImage(new Uri("/ice_cream-removebg-preview.png", UriKind.RelativeOrAbsolute));
                 btn2.Text = "1";
                 _2_add = 2;
             }
             else
             {
+                empty_cone_7.Source = new BitmapImage(new Uri("/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTExL3JtNjA0LWVsZW1lbnQtMDg3OC5wbmc-removebg-preview.png", UriKind.RelativeOrAbsolute));
                 btn2.Text = "0";
                 _2_add = 0;
             }
@@ -140,11 +144,13 @@ namespace binary_game
         {
             if (btn4.Text == "0")
             {
+                empty_cone_6.Source = new BitmapImage(new Uri("/ice_cream-removebg-preview.png", UriKind.RelativeOrAbsolute));
                 btn4.Text = "1";
                 _4_add = 4;
             }
             else
             {
+                empty_cone_6.Source = new BitmapImage(new Uri("/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTExL3JtNjA0LWVsZW1lbnQtMDg3OC5wbmc-removebg-preview.png", UriKind.RelativeOrAbsolute));
                 btn4.Text = "0";
                 _4_add = 0;
             }
@@ -154,11 +160,13 @@ namespace binary_game
         {
             if (btn8.Text == "0")
             {
+                empty_cone_5.Source = new BitmapImage(new Uri("/ice_cream-removebg-preview.png", UriKind.RelativeOrAbsolute));
                 btn8.Text = "1";
                 _8_add = 8;
             }
             else
             {
+                empty_cone_5.Source = new BitmapImage(new Uri("/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTExL3JtNjA0LWVsZW1lbnQtMDg3OC5wbmc-removebg-preview.png", UriKind.RelativeOrAbsolute));
                 btn8.Text = "0";
                 _8_add = 0;
             }
@@ -168,11 +176,13 @@ namespace binary_game
         {
             if (btn16.Text == "0")
             {
+                empty_cone_4.Source = new BitmapImage(new Uri("/ice_cream-removebg-preview.png", UriKind.RelativeOrAbsolute));
                 btn16.Text = "1";
                 _16_add = 16;
             }
             else
             {
+                empty_cone_4.Source = new BitmapImage(new Uri("/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTExL3JtNjA0LWVsZW1lbnQtMDg3OC5wbmc-removebg-preview.png", UriKind.RelativeOrAbsolute));
                 btn16.Text = "0";
                 _16_add = 0;
             }
@@ -182,11 +192,13 @@ namespace binary_game
         {
             if (btn32.Text == "0")
             {
+                empty_cone_3.Source = new BitmapImage(new Uri("/ice_cream-removebg-preview.png", UriKind.RelativeOrAbsolute));
                 btn32.Text = "1";
                 _32_add = 32;
             }
             else
             {
+                empty_cone_3.Source = new BitmapImage(new Uri("/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTExL3JtNjA0LWVsZW1lbnQtMDg3OC5wbmc-removebg-preview.png", UriKind.RelativeOrAbsolute));
                 btn32.Text = "0";
                 _32_add = 0;
             }
@@ -196,11 +208,13 @@ namespace binary_game
         {
             if (btn64.Text == "0")
             {
+                empty_cone_2.Source = new BitmapImage(new Uri("/ice_cream-removebg-preview.png", UriKind.RelativeOrAbsolute));
                 btn64.Text = "1";
                 _64_add = 64;
             }
             else
             {
+                empty_cone_2.Source = new BitmapImage(new Uri("/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTExL3JtNjA0LWVsZW1lbnQtMDg3OC5wbmc-removebg-preview.png", UriKind.RelativeOrAbsolute));
                 btn64.Text = "0";
                 _64_add = 0;
             }
@@ -210,11 +224,13 @@ namespace binary_game
         {
             if (btn128.Text == "0")
             {
+                empty_cone.Source = new BitmapImage(new Uri("/ice_cream-removebg-preview.png", UriKind.RelativeOrAbsolute));
                 btn128.Text = "1";
                 _128_add = 128;
             }
             else
             {
+                empty_cone.Source = new BitmapImage(new Uri("/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTExL3JtNjA0LWVsZW1lbnQtMDg3OC5wbmc-removebg-preview.png", UriKind.RelativeOrAbsolute));
                 btn128.Text = "0";
                 _128_add = 0;
             }
