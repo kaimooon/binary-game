@@ -29,16 +29,13 @@ namespace binary_game
 
 
         private void LoadLeaderboard()
-        {
-            // Load leaderboard from CSV file
+        {            
             string filePath = "leaderboard.csv";
 
             if (File.Exists(filePath))
             {
-                // Read all lines from the file
                 string[] lines = File.ReadAllLines(filePath);
 
-                // Sort the leaderboard by score (descending order)
                 Array.Sort(lines, (x, y) =>
                 {
                     int scoreX = int.Parse(x.Split(',')[1]);
@@ -46,7 +43,6 @@ namespace binary_game
                     return scoreY.CompareTo(scoreX);
                 });
 
-                // Populate leaderboardListBox_Name, leaderboardListBox_Score, and leaderboardListBox_PlayTime
                 leaderboardListBox_Name.ItemsSource = lines.Select(line => line.Split(',')[0]).Take(10);
                 leaderboardListBox_Score.ItemsSource = lines.Select(line => line.Split(',')[1]).Take(10);
                 leaderboardListBox_PlayTime.ItemsSource = lines.Select(line => line.Split(',')[2]).Take(10);
