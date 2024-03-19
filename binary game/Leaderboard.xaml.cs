@@ -20,87 +20,40 @@ namespace binary_game
     /// </summary>
     public partial class Leaderboard : Window
     {
-        private string filePath = "leaderboard.csv";
-        public Leaderboard()
+        
+        public Leaderboard(string playerName)
         {
             InitializeComponent();
             LoadLeaderboard();
         }
 
+
         private void LoadLeaderboard()
         {
-            if (!File.Exists(filePath))
-                return;
+            // Load leaderboard from CSV file
+            string filePath = "leaderboard.csv";
 
-            try
+            if (File.Exists(filePath))
             {
+                // Read all lines from the file
                 string[] lines = File.ReadAllLines(filePath);
-                for (int i = 0; i < Math.Min(lines.Length, 10); i++)
+
+                // Sort the leaderboard by score (descending order)
+                Array.Sort(lines, (x, y) =>
                 {
-                    string[] parts = lines[i].Split(',');
-                    if (parts.Length >= 3)
-                    {
-                        // Display the name, score, and play time in corresponding labels
-                        switch (i)
-                        {
-                            case 0:
-                                first_place.Content = parts[0];
-                                first_place_score.Content = parts[1];
-                                first_place_pt.Content = parts[2];
-                                break;
-                            case 1:
-                                second_place.Content = parts[0];
-                                second_place_score.Content = parts[1];
-                                second_place_pt.Content = parts[2];
-                                break;
-                            case 2:
-                                third_place.Content = parts[0];
-                                third_place_score.Content = parts[1];
-                                third_place_pt.Content = parts[2];
-                                break;
-                            case 3:
-                                fourth_place.Content = parts[0];
-                                fourth_place_score.Content = parts[1];
-                                fourth_place_pt.Content = parts[2];
-                                break;
-                            case 4:
-                                fifth_place.Content = parts[0];
-                                fifth_place_score.Content = parts[1];
-                                fifth_place_pt.Content = parts[2];
-                                break;
-                            case 5:
-                                sixth_place.Content = parts[0];
-                                sixth_place_score.Content = parts[1];
-                                sixth_place_pt.Content = parts[2];
-                                break;
-                            case 6:
-                                seventh_place.Content = parts[0];
-                                seventh_place_score.Content = parts[1];
-                                seventh_place_pt.Content = parts[2];
-                                break;
-                            case 7:
-                                eighth_place.Content = parts[0];
-                                eighth_place_score.Content = parts[1];
-                                eighth_place_pt.Content = parts[2];
-                                break;
-                            case 8:
-                                ninth_place.Content = parts[0];
-                                ninth_place_score.Content = parts[1];
-                                ninth_place_pt.Content = parts[2];
-                                break;
-                            case 9:
-                                tenth_place.Content = parts[0];
-                                tenth_place_score.Content = parts[1];
-                                tenth_place_pt.Content = parts[2];
-                                break;
-                                
-                        }
-                    }
-                }
+                    int scoreX = int.Parse(x.Split(',')[1]);
+                    int scoreY = int.Parse(y.Split(',')[1]);
+                    return scoreY.CompareTo(scoreX);
+                });
+
+                // Populate leaderboardListBox_Name, leaderboardListBox_Score, and leaderboardListBox_PlayTime
+                leaderboardListBox_Name.ItemsSource = lines.Select(line => line.Split(',')[0]).Take(10);
+                leaderboardListBox_Score.ItemsSource = lines.Select(line => line.Split(',')[1]).Take(10);
+                leaderboardListBox_PlayTime.ItemsSource = lines.Select(line => line.Split(',')[2]).Take(10);
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show($"Error loading leaderboard: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Leaderboard file not found.");
             }
         }
     }

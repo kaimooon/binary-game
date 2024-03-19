@@ -20,6 +20,7 @@ namespace binary_game
     /// </summary>
     public partial class MainWindow : Window
     {
+        string playerName;
         public MainWindow()
         {
             InitializeComponent();
@@ -36,6 +37,7 @@ namespace binary_game
 
         private void NameWindow_PlayerNameSubmitted(object sender, string playerName)
         {
+            this.playerName = playerName; // Update playerName field
             // Initialize the game window and pass the player's name
             Game gameWindow = new Game(playerName);
             gameWindow.ShowDialog();
@@ -45,8 +47,8 @@ namespace binary_game
 
         private void ldb_btn_Click(object sender, RoutedEventArgs e)
         {
-            // Open the leaderboard window when the Leaderboard button is clicked
-            Leaderboard leaderboardWindow = new Leaderboard();
+            // Open the leaderboard window and pass the player's name
+            Leaderboard leaderboardWindow = new Leaderboard(playerName);
             leaderboardWindow.ShowDialog();
         }
 

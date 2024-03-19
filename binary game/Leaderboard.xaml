@@ -10,39 +10,12 @@
         <Grid.Background>
             <ImageBrush ImageSource="/illustration-ice-cream-cone-decorated-pink-cafe-with-white-frame-board-background-3d-style_62298-683.jpg" Stretch="UniformToFill"/>
         </Grid.Background>
-        <Label x:Name="first_place" Content="Label" HorizontalAlignment="Left" Margin="156,74,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="second_place" Content="Label" HorizontalAlignment="Left" Margin="156,100,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="third_place" Content="Label" HorizontalAlignment="Left" Margin="156,126,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="fourth_place" Content="Label" HorizontalAlignment="Left" Margin="156,152,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="fifth_place" Content="Label" HorizontalAlignment="Left" Margin="156,178,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="sixth_place" Content="Label" HorizontalAlignment="Left" Margin="156,0,0,0" VerticalAlignment="Center"/>
-        <Label x:Name="seventh_place" Content="Label" HorizontalAlignment="Left" Margin="156,230,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="eighth_place" Content="Label" HorizontalAlignment="Left" Margin="156,256,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="ninth_place" Content="Label" HorizontalAlignment="Left" Margin="156,282,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="tenth_place" Content="Label" HorizontalAlignment="Left" Margin="156,308,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="Name" Content="Name" HorizontalAlignment="Left" Margin="149,43,0,0" VerticalAlignment="Top" FontSize="16" Background="{x:Null}"/>
-        <Label x:Name="Score" Content="Score" HorizontalAlignment="Left" Margin="364,43,0,0" VerticalAlignment="Top" FontSize="16" Background="{x:Null}"/>
-        <Label x:Name="Total_Play_Time" Content="Total Play Time" HorizontalAlignment="Left" Margin="535,43,0,0" VerticalAlignment="Top" FontSize="16" Background="{x:Null}"/>
-        <Label x:Name="first_place_score" Content="Label" HorizontalAlignment="Left" Margin="370,74,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="second_place_score" Content="Label" HorizontalAlignment="Left" Margin="370,100,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="third_place_score" Content="Label" HorizontalAlignment="Left" Margin="370,126,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="fourth_place_score" Content="Label" HorizontalAlignment="Left" Margin="370,152,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="fifth_place_score" Content="Label" HorizontalAlignment="Left" Margin="370,178,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="sixth_place_score" Content="Label" HorizontalAlignment="Left" Margin="370,0,0,0" VerticalAlignment="Center"/>
-        <Label x:Name="seventh_place_score" Content="Label" HorizontalAlignment="Left" Margin="370,230,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="eighth_place_score" Content="Label" HorizontalAlignment="Left" Margin="370,256,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="ninth_place_score" Content="Label" HorizontalAlignment="Left" Margin="370,282,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="tenth_place_score" Content="Label" HorizontalAlignment="Left" Margin="370,308,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="first_place_pt" Content="Label" HorizontalAlignment="Left" Margin="574,74,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="second_place_pt" Content="Label" HorizontalAlignment="Left" Margin="574,100,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="third_place_pt" Content="Label" HorizontalAlignment="Left" Margin="574,126,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="fourth_place_pt" Content="Label" HorizontalAlignment="Left" Margin="574,152,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="fifth_place_pt" Content="Label" HorizontalAlignment="Left" Margin="574,178,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="sixth_place_pt" Content="Label" HorizontalAlignment="Left" Margin="574,0,0,0" VerticalAlignment="Center"/>
-        <Label x:Name="seventh_place_pt" Content="Label" HorizontalAlignment="Left" Margin="574,230,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="eighth_place_pt" Content="Label" HorizontalAlignment="Left" Margin="574,256,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="ninth_place_pt" Content="Label" HorizontalAlignment="Left" Margin="574,282,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="tenth_place_pt" Content="Label" HorizontalAlignment="Left" Margin="574,308,0,0" VerticalAlignment="Top"/>
+        <ListBox x:Name="leaderboardListBox_Name" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="169,110,530,153" BorderBrush="#FFAB44AB" FontSize="14" Foreground="#FFCF0DFD"/>
+        <ListBox x:Name="leaderboardListBox_Score" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="339,110,360,153" BorderBrush="#FFAB44AB" FontSize="14" Foreground="#FFCF0DFD"/>
+        <ListBox x:Name="leaderboardListBox_PlayTime" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="498,110,201,153" BorderBrush="#FFAB44AB" FontSize="14" Foreground="#FFCF0DFD"/>
+        <Label Content="Name" HorizontalAlignment="Left" Margin="169,66,0,0" VerticalAlignment="Top" Foreground="#FFE467F1" FontSize="22"/>
+        <Label Content="Score" HorizontalAlignment="Left" Margin="339,66,0,0" VerticalAlignment="Top" Foreground="#FFE467F1" FontSize="22"/>
+        <Label Content="Play Time" HorizontalAlignment="Left" Margin="485,66,0,0" VerticalAlignment="Top" Foreground="#FFE467F1" FontSize="22"/>
 
     </Grid>
 </Window>

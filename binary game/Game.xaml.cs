@@ -29,16 +29,16 @@ namespace binary_game
         int _32_add = 0;
         int _64_add = 0;
         int _128_add = 0;
-        int _calc = 0;
-        int _sec = 0;
 
-        private int randomNumber;
-        private int score;
-        private int timerInterval;
-        private int currentBinaryValue;
-        private DispatcherTimer gameTimer;
-        private string playerName;
         
+        int randomNumber;
+        int score;
+        int RoundCount = 1;
+        int _sec = 30;
+
+        DispatcherTimer gameTimer;
+        string playerName;
+        DispatcherTimer TimePlayed;
 
         public Game(string playerName)
         {
@@ -49,14 +49,11 @@ namespace binary_game
 
         public void InitializeGame()
         {
-            
-            score = 0;
-            timerInterval = 40; // Set the initial timer interval
             gameTimer = new DispatcherTimer();
-            gameTimer.Tick += GameTimer_Tick;
-            gameTimer.Interval = TimeSpan.FromSeconds(2); // Set the interval to 2 seconds
+            gameTimer.Tick += gameTimer_Tick;
+            gameTimer.Interval = new TimeSpan(0, 0, 0, 1, 0);
+
             gameTimer.Start();
-            UpdateTimerLabel();
             GenerateRandomNumber();
         }
 
@@ -67,47 +64,81 @@ namespace binary_game
             given_num.Content = randomNumber.ToString();        
         }
 
- 
-
-        private void GameTimer_Tick(object sender, EventArgs e)
+        private void gameTimer_Tick(object sender, EventArgs e)
         {
-            timerInterval--; // Decrease the timer interval by 1 second
-            if (timerInterval <= 0)
-            {
-                EndGame();
-            }
-            else
-            {
-                UpdateTimerLabel();
-            }
-        }
+            _sec = int.Parse(timer_label.Content.ToString());
+            _sec--;
 
-        private void UpdateTimerLabel()
-        {
-            timer_label.Content = timerInterval.ToString();
+            if (_sec == 0)
+            {
+                gameTimer.Stop();
+                MessageBox.Show("Times up!");
+                _sec = 40;
+
+                btn1.Text = "0";
+                btn2.Text = "0";
+                btn4.Text = "0";
+                btn8.Text = "0";
+                btn16.Text = "0";
+                btn32.Text = "0";
+                btn64.Text = "0";
+                btn128.Text = "0";
+
+                _1_add = 0;
+                _2_add = 0;
+                _4_add = 0;
+                _8_add = 0;
+                _16_add = 0;
+                _32_add = 0;
+                _64_add = 0;
+                _128_add = 0;
+
+                empty_cone_8.Source = new BitmapImage(new Uri("/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTExL3JtNjA0LWVsZW1lbnQtMDg3OC5wbmc-removebg-preview.png", UriKind.RelativeOrAbsolute));
+                empty_cone_7.Source = new BitmapImage(new Uri("/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTExL3JtNjA0LWVsZW1lbnQtMDg3OC5wbmc-removebg-preview.png", UriKind.RelativeOrAbsolute));
+                empty_cone_6.Source = new BitmapImage(new Uri("/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTExL3JtNjA0LWVsZW1lbnQtMDg3OC5wbmc-removebg-preview.png", UriKind.RelativeOrAbsolute));
+                empty_cone_5.Source = new BitmapImage(new Uri("/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTExL3JtNjA0LWVsZW1lbnQtMDg3OC5wbmc-removebg-preview.png", UriKind.RelativeOrAbsolute));
+                empty_cone_4.Source = new BitmapImage(new Uri("/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTExL3JtNjA0LWVsZW1lbnQtMDg3OC5wbmc-removebg-preview.png", UriKind.RelativeOrAbsolute));
+                empty_cone_3.Source = new BitmapImage(new Uri("/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTExL3JtNjA0LWVsZW1lbnQtMDg3OC5wbmc-removebg-preview.png", UriKind.RelativeOrAbsolute));
+                empty_cone_2.Source = new BitmapImage(new Uri("/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTExL3JtNjA0LWVsZW1lbnQtMDg3OC5wbmc-removebg-preview.png", UriKind.RelativeOrAbsolute));
+                empty_cone.Source = new BitmapImage(new Uri("/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTExL3JtNjA0LWVsZW1lbnQtMDg3OC5wbmc-removebg-preview.png", UriKind.RelativeOrAbsolute));
+
+                given_num.Content = "0";
+
+                RoundCount = 1;
+                rounds_label.Content = rounds_label.ToString();
+
+                score = 0;
+                score_label.Content = score.ToString();
+            }
+            timer_label.Content = _sec.ToString();
         }
 
         private void EndGame()
         {
             gameTimer.Stop();
-            UpdateLeaderboard();
+            UpdateLeaderboard(); //Update the leaderboard
             MessageBox.Show($"Game Over! Your score: {score}");
         }
 
         private void UpdateLeaderboard()
         {
-            string playerName = "Player"; // You can add logic to get the player's name
             string filePath = "leaderboard.csv";
+            // Read all existing lines from the leaderboard file
             string[] lines = File.ReadAllLines(filePath);
-            using (StreamWriter writer = new StreamWriter(filePath))
-            {
-                for (int i = 0; i < Math.Min(10, lines.Length); i++)
-                {
-                    writer.WriteLine(lines[i]);
-                }
-                writer.WriteLine($"{playerName},{score},{40 - timerInterval}");
-            }
+
+            // Create a list to store leaderboard entries
+            List<string> leaderboardEntries = new List<string>();
+
+            // Add existing leaderboard entries to the list
+            leaderboardEntries.AddRange(lines);
+
+            // Add the current player's name, score, and time played to the leaderboard entries
+            leaderboardEntries.Add($"{playerName},{score},{(30 - _sec)}");
+
+            // Write the updated leaderboard entries back to the file
+            File.WriteAllLines(filePath, leaderboardEntries);
         }
+
 
         private void _1_btn_Click(object sender, RoutedEventArgs e)
         {
@@ -251,11 +282,20 @@ namespace binary_game
             if (results.ToString() == given_num.Content.ToString())
             {
                 gameTimer.Stop();
+                RoundCount++;
+                rounds_label.Content = RoundCount.ToString();
+
+                double minus = RoundCount * 0.066;
+                int roundTimer = 30 - (int)(30 * minus);
+                timer_label.Content = roundTimer.ToString();
+
+                if (RoundCount >= 11)
+                {
+                    _sec = 30;
+                    timer_label.Content = _sec.ToString();
+                }
+
                 MessageBox.Show("Correct");
-                //start_btn.IsEnabled = true;
-                submit_btn.IsEnabled = false;
-                _sec = 30;
-                timer_label.Content = _sec.ToString();
 
                 btn1.Text = "0";
                 btn2.Text = "0";
@@ -266,10 +306,23 @@ namespace binary_game
                 btn64.Text = "0";
                 btn128.Text = "0";
                 given_num.Content = "x";
+                _1_add = 0;
+                _2_add = 0;
+                _4_add = 0;
+                _8_add = 0;
+                _16_add = 0;
+                _32_add = 0;
+                _64_add = 0;
+                _128_add = 0;
+                InitializeGame();
+
+                score += 1;
+                score_label.Content = score.ToString();
             }
             else
             {
-                MessageBox.Show("Incorrect");
+                MessageBox.Show("Incorrect!");
+                EndGame();
             }
         }
     }

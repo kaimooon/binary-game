@@ -35,7 +35,7 @@
         <Button x:Name="_2_btn" Content="^" HorizontalAlignment="Left" Margin="549,302,0,0" VerticalAlignment="Top" Width="30" Height="30" FontSize="24" Click="_2_btn_Click" Background="#FF7F8AE2"/>
         <Button x:Name="_1_btn" Content="^" HorizontalAlignment="Left" Margin="606,302,0,0" VerticalAlignment="Top" Width="30" Height="30" FontSize="24" Click="_1_btn_Click" Background="#FF7F8AE2"/>
         <Button x:Name="submit_btn" Content="Submit" HorizontalAlignment="Left" Margin="355,350,0,0" VerticalAlignment="Top" FontSize="22" Click="submit_btn_Click" Background="#FF3247F1"/>
-        <Label x:Name="timer_label" Content="0" HorizontalAlignment="Left" Margin="377,45,0,0" VerticalAlignment="Top" FontSize="36" Foreground="#FFE81F1F"/>
+        <Label x:Name="timer_label" Content="30" HorizontalAlignment="Left" Margin="377,45,0,0" VerticalAlignment="Top" FontSize="36" Foreground="#FFE81F1F"/>
         <Label x:Name="given_num" Content="0" HorizontalAlignment="Left" Margin="377,152,0,0" VerticalAlignment="Top" Background="#FF9AECE2" FontSize="36" Foreground="#FF3731EF"/>
         <Image x:Name="empty_cone" Height="100" Width="75" Margin="117,81,0,0" Source="/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTExL3JtNjA0LWVsZW1lbnQtMDg3OC5wbmc-removebg-preview.png" VerticalAlignment="Top" HorizontalAlignment="Left"/>
         <Image x:Name="empty_cone_2" Height="100" Width="75" Margin="173,81,0,0" Source="/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTExL3JtNjA0LWVsZW1lbnQtMDg3OC5wbmc-removebg-preview.png" VerticalAlignment="Top" HorizontalAlignment="Left"/>
@@ -45,6 +45,10 @@
         <Image x:Name="empty_cone_6" Height="100" Width="75" Margin="474,81,0,0" Source="/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTExL3JtNjA0LWVsZW1lbnQtMDg3OC5wbmc-removebg-preview.png" VerticalAlignment="Top" HorizontalAlignment="Left"/>
         <Image x:Name="empty_cone_7" Height="100" Width="75" Margin="531,81,0,0" Source="/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTExL3JtNjA0LWVsZW1lbnQtMDg3OC5wbmc-removebg-preview.png" VerticalAlignment="Top" HorizontalAlignment="Left"/>
         <Image x:Name="empty_cone_8" Height="100" Width="75" Margin="588,81,0,0" Source="/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTExL3JtNjA0LWVsZW1lbnQtMDg3OC5wbmc-removebg-preview.png" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+        <Label x:Name="rounds_label" Content="1" HorizontalAlignment="Left" Margin="131,10,0,0" VerticalAlignment="Top" FontSize="36" Foreground="#FF39982C"/>
+        <Label x:Name="rounds_label_Copy" Content="Round:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="36" Foreground="#FF39982C"/>
+        <Label x:Name="score_label" Content="0" HorizontalAlignment="Left" Margin="746,10,0,0" VerticalAlignment="Top" FontSize="36" Foreground="#FF39982C"/>
+        <Label x:Name="score_label_Copy" Content="Score:" HorizontalAlignment="Left" Margin="635,10,0,0" VerticalAlignment="Top" FontSize="36" Foreground="#FF39982C"/>
 
     </Grid>
 </Window>
