@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -34,11 +34,10 @@ namespace binary_game
         int randomNumber;
         int score;
         int RoundCount = 1;
-        int _sec = 30;
+        int _sec = 0;
 
         DispatcherTimer gameTimer;
         string playerName;
-        DispatcherTimer TimePlayed;
 
         public Game(string playerName)
         {
@@ -128,6 +127,12 @@ namespace binary_game
             List<string> leaderboardEntries = new List<string>();
 
             leaderboardEntries.AddRange(lines);
+
+            int totalPlayTimeSeconds = (30 * (RoundCount - 1)) + (30 - _sec);
+            int totalPlayTimeMinutes = totalPlayTimeSeconds / 60;
+            int remainingSeconds = totalPlayTimeSeconds % 60;
+
+            leaderboardEntries.Add($"{playerName},{score},{totalPlayTimeMinutes}m {remainingSeconds}s");
 
             leaderboardEntries.Add($"{playerName},{score},{(30 - _sec)}");
 
