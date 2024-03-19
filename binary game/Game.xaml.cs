@@ -286,7 +286,7 @@ namespace binary_game
 
                 if (RoundCount >= 11)
                 {
-                    _sec = 30;
+                    _sec = 10;
                     timer_label.Content = _sec.ToString();
                 }
 
