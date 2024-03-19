@@ -101,9 +101,13 @@ namespace binary_game
                 empty_cone_2.Source = new BitmapImage(new Uri("/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTExL3JtNjA0LWVsZW1lbnQtMDg3OC5wbmc-removebg-preview.png", UriKind.RelativeOrAbsolute));
                 empty_cone.Source = new BitmapImage(new Uri("/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTExL3JtNjA0LWVsZW1lbnQtMDg3OC5wbmc-removebg-preview.png", UriKind.RelativeOrAbsolute));
 
-                rounds_label.Content = RoundCount.ToString();
+                given_num.Content = "0";
+
+                RoundCount = 1;
+                rounds_label.Content = rounds_label.ToString();
+
+                score = 0;
                 score_label.Content = score.ToString();
-                Close();
             }
             timer_label.Content = _sec.ToString();
         }
