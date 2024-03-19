@@ -116,26 +116,21 @@ namespace binary_game
         private void EndGame()
         {
             gameTimer.Stop();
-            UpdateLeaderboard(); //Update the leaderboard
+            UpdateLeaderboard();
             MessageBox.Show($"Game Over! Your score: {score}");
         }
 
         private void UpdateLeaderboard()
         {
             string filePath = "leaderboard.csv";
-            // Read all existing lines from the leaderboard file
             string[] lines = File.ReadAllLines(filePath);
 
-            // Create a list to store leaderboard entries
             List<string> leaderboardEntries = new List<string>();
 
-            // Add existing leaderboard entries to the list
             leaderboardEntries.AddRange(lines);
 
-            // Add the current player's name, score, and time played to the leaderboard entries
             leaderboardEntries.Add($"{playerName},{score},{(30 - _sec)}");
 
-            // Write the updated leaderboard entries back to the file
             File.WriteAllLines(filePath, leaderboardEntries);
         }
 
