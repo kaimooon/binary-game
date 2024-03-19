@@ -30,14 +30,10 @@ namespace binary_game
         {
             string playerName = name_input.Text;
 
-            // Check if there are subscribers to the event
             if (PlayerNameSubmitted != null)
             {
-                // Call the event handler method directly with the player's name
                 PlayerNameSubmitted(sender, playerName);
             }
-
-            // Close the Name window
             this.Close();
         }
     }
