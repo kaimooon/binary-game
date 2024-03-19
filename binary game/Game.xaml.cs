@@ -72,7 +72,7 @@ namespace binary_game
             {
                 gameTimer.Stop();
                 MessageBox.Show("Times up!");
-                _sec = 40;
+                _sec = 30;
 
                 btn1.Text = "0";
                 btn2.Text = "0";
