@@ -101,13 +101,9 @@ namespace binary_game
                 empty_cone_2.Source = new BitmapImage(new Uri("/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTExL3JtNjA0LWVsZW1lbnQtMDg3OC5wbmc-removebg-preview.png", UriKind.RelativeOrAbsolute));
                 empty_cone.Source = new BitmapImage(new Uri("/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTExL3JtNjA0LWVsZW1lbnQtMDg3OC5wbmc-removebg-preview.png", UriKind.RelativeOrAbsolute));
 
-                given_num.Content = "0";
-
-                RoundCount = 1;
-                rounds_label.Content = rounds_label.ToString();
-
-                score = 0;
+                rounds_label.Content = RoundCount.ToString();
                 score_label.Content = score.ToString();
+                Close();
             }
             timer_label.Content = _sec.ToString();
         }
@@ -128,13 +124,16 @@ namespace binary_game
 
             leaderboardEntries.AddRange(lines);
 
+            // Calculate total play time in minutes and seconds
             int totalPlayTimeSeconds = (30 * (RoundCount - 1)) + (30 - _sec);
             int totalPlayTimeMinutes = totalPlayTimeSeconds / 60;
             int remainingSeconds = totalPlayTimeSeconds % 60;
 
+            // Add the current player's name, score, and total play time to the leaderboard entries
             leaderboardEntries.Add($"{playerName},{score},{totalPlayTimeMinutes}m {remainingSeconds}s");
 
             leaderboardEntries.Add($"{playerName},{score},{(30 - _sec)}");
+
 
             File.WriteAllLines(filePath, leaderboardEntries);
         }
