@@ -27,7 +27,6 @@ namespace binary_game
             LoadLeaderboard();
         }
 
-
         private void LoadLeaderboard()
         {            
             string filePath = "leaderboard.csv";
