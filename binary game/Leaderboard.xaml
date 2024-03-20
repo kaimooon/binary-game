@@ -1,4 +1,4 @@
-﻿<Window x:Class="binary_game.Leaderboard"
+<Window x:Class="binary_game.Leaderboard"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -10,12 +10,12 @@
         <Grid.Background>
             <ImageBrush ImageSource="/illustration-ice-cream-cone-decorated-pink-cafe-with-white-frame-board-background-3d-style_62298-683.jpg" Stretch="UniformToFill"/>
         </Grid.Background>
-        <ListBox x:Name="leaderboardListBox_Name" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="169,110,530,153" BorderBrush="#FFAB44AB" FontSize="14" Foreground="#FFCF0DFD"/>
-        <ListBox x:Name="leaderboardListBox_Score" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="339,110,360,153" BorderBrush="#FFAB44AB" FontSize="14" Foreground="#FFCF0DFD"/>
-        <ListBox x:Name="leaderboardListBox_PlayTime" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="498,110,201,153" BorderBrush="#FFAB44AB" FontSize="14" Foreground="#FFCF0DFD"/>
-        <Label Content="Name" HorizontalAlignment="Left" Margin="169,66,0,0" VerticalAlignment="Top" Foreground="#FFE467F1" FontSize="22"/>
-        <Label Content="Score" HorizontalAlignment="Left" Margin="339,66,0,0" VerticalAlignment="Top" Foreground="#FFE467F1" FontSize="22"/>
-        <Label Content="Play Time" HorizontalAlignment="Left" Margin="485,66,0,0" VerticalAlignment="Top" Foreground="#FFE467F1" FontSize="22"/>
+        <ListBox x:Name="leaderboardListBox_Name" BorderThickness="2" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="170,110,530,153" BorderBrush="#FFAB44AB" FontSize="14" Foreground="#FFCF0DFD"/>
+        <ListBox x:Name="leaderboardListBox_Score" BorderThickness="2" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="338,110,360,153" BorderBrush="#FFAB44AB" FontSize="14" Foreground="#FFCF0DFD"/>
+        <ListBox x:Name="leaderboardListBox_PlayTime" BorderThickness="2" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="501,110,198,153" BorderBrush="#FFAB44AB" FontSize="14" Foreground="#FFCF0DFD"/>
+        <Label Content="Name" HorizontalContentAlignment="Center" Margin="186,66,546,0" VerticalAlignment="Top" Foreground="#FFE467F1" FontSize="22" Background="White"/>
+        <Label Content="Score" HorizontalContentAlignment="Center" Margin="356,66,378,0" VerticalAlignment="Top" Foreground="#FFE467F1" FontSize="22"/>
+        <Label Content="Play Time" HorizontalContentAlignment="Center" Margin="498,66,196,0" VerticalAlignment="Top" Foreground="#FFE467F1" FontSize="22"/>
 
     </Grid>
 </Window>
