@@ -128,12 +128,10 @@ namespace binary_game
 
             leaderboardEntries.AddRange(lines);
 
-            // Calculate total play time in minutes and seconds
             int totalPlayTimeSeconds = (30 * (RoundCount - 1)) + (30 - _sec);
             int totalPlayTimeMinutes = totalPlayTimeSeconds / 60;
             int remainingSeconds = totalPlayTimeSeconds % 60;
 
-            // Add the current player's name, score, and total play time to the leaderboard entries
             leaderboardEntries.Add($"{playerName},{score},{totalPlayTimeMinutes}m {remainingSeconds}s");
 
             leaderboardEntries.Add($"{playerName},{score},{(30 - _sec)}");
