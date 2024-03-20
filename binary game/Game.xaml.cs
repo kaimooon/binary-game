@@ -282,7 +282,7 @@ namespace binary_game
             int button_128 = _128_add;
             int results = button_1 + button_2 + button_4 + button_8 + button_16 + button_32 + button_64 + button_128;
 
-            if (results.ToString() == given_num.Content.ToString())
+            if (int.Parse(results.ToString()) == int.Parse(given_num.Content.ToString()))
             {
                 gameTimer.Stop();
                 RoundCount++;
