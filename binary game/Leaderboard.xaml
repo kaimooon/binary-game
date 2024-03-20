@@ -13,9 +13,9 @@
         <ListBox x:Name="leaderboardListBox_Name" BorderThickness="2" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="170,110,530,153" BorderBrush="#FFAB44AB" FontSize="14" Foreground="#FFCF0DFD"/>
         <ListBox x:Name="leaderboardListBox_Score" BorderThickness="2" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="338,110,360,153" BorderBrush="#FFAB44AB" FontSize="14" Foreground="#FFCF0DFD"/>
         <ListBox x:Name="leaderboardListBox_PlayTime" BorderThickness="2" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="501,110,198,153" BorderBrush="#FFAB44AB" FontSize="14" Foreground="#FFCF0DFD"/>
-        <Label Content="Name" HorizontalContentAlignment="Center" Margin="186,66,546,0" VerticalAlignment="Top" Foreground="#FFE467F1" FontSize="22" Background="White"/>
-        <Label Content="Score" HorizontalContentAlignment="Center" Margin="356,66,378,0" VerticalAlignment="Top" Foreground="#FFE467F1" FontSize="22"/>
-        <Label Content="Play Time" HorizontalContentAlignment="Center" Margin="498,66,196,0" VerticalAlignment="Top" Foreground="#FFE467F1" FontSize="22"/>
+        <Label Content="Name" HorizontalContentAlignment="Center" Margin="178,66,538,0" VerticalAlignment="Top" Foreground="#FFE467F1" FontSize="22" Background="White"/>
+        <Label Content="Score" HorizontalContentAlignment="Center" Margin="347,66,369,0" VerticalAlignment="Top" Foreground="#FFE467F1" FontSize="22"/>
+        <Label Content="Play Time" HorizontalContentAlignment="Center" Margin="490,66,188,0" VerticalAlignment="Top" Foreground="#FFE467F1" FontSize="22"/>
 
     </Grid>
 </Window>
