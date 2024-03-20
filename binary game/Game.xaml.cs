@@ -48,6 +48,24 @@ namespace binary_game
 
         public void InitializeGame()
         {
+            btn1.Text = "0";
+            btn2.Text = "0";
+            btn4.Text = "0";
+            btn8.Text = "0";
+            btn16.Text = "0";
+            btn32.Text = "0";
+            btn64.Text = "0";
+            btn128.Text = "0";
+            given_num.Content = "x";
+            _1_add = 0;
+            _2_add = 0;
+            _4_add = 0;
+            _8_add = 0;
+            _16_add = 0;
+            _32_add = 0;
+            _64_add = 0;
+            _128_add = 0;
+
             gameTimer = new DispatcherTimer();
             gameTimer.Tick += gameTimer_Tick;
             gameTimer.Interval = new TimeSpan(0, 0, 0, 1, 0);
@@ -298,32 +316,27 @@ namespace binary_game
 
                 MessageBox.Show("Correct");
 
-                btn1.Text = "0";
-                btn2.Text = "0";
-                btn4.Text = "0";
-                btn8.Text = "0";
-                btn16.Text = "0";
-                btn32.Text = "0";
-                btn64.Text = "0";
-                btn128.Text = "0";
-                given_num.Content = "x";
-                _1_add = 0;
-                _2_add = 0;
-                _4_add = 0;
-                _8_add = 0;
-                _16_add = 0;
-                _32_add = 0;
-                _64_add = 0;
-                _128_add = 0;
+                
                 InitializeGame();
+
+                empty_cone_8.Source = new BitmapImage(new Uri("/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTExL3JtNjA0LWVsZW1lbnQtMDg3OC5wbmc-removebg-preview.png", UriKind.RelativeOrAbsolute));
+                empty_cone_7.Source = new BitmapImage(new Uri("/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTExL3JtNjA0LWVsZW1lbnQtMDg3OC5wbmc-removebg-preview.png", UriKind.RelativeOrAbsolute));
+                empty_cone_6.Source = new BitmapImage(new Uri("/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTExL3JtNjA0LWVsZW1lbnQtMDg3OC5wbmc-removebg-preview.png", UriKind.RelativeOrAbsolute));
+                empty_cone_5.Source = new BitmapImage(new Uri("/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTExL3JtNjA0LWVsZW1lbnQtMDg3OC5wbmc-removebg-preview.png", UriKind.RelativeOrAbsolute));
+                empty_cone_4.Source = new BitmapImage(new Uri("/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTExL3JtNjA0LWVsZW1lbnQtMDg3OC5wbmc-removebg-preview.png", UriKind.RelativeOrAbsolute));
+                empty_cone_3.Source = new BitmapImage(new Uri("/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTExL3JtNjA0LWVsZW1lbnQtMDg3OC5wbmc-removebg-preview.png", UriKind.RelativeOrAbsolute));
+                empty_cone_2.Source = new BitmapImage(new Uri("/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTExL3JtNjA0LWVsZW1lbnQtMDg3OC5wbmc-removebg-preview.png", UriKind.RelativeOrAbsolute));
+                empty_cone.Source = new BitmapImage(new Uri("/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTExL3JtNjA0LWVsZW1lbnQtMDg3OC5wbmc-removebg-preview.png", UriKind.RelativeOrAbsolute));
 
                 score += 1;
                 score_label.Content = score.ToString();
             }
             else
             {
-                MessageBox.Show("Incorrect!");
+                MessageBox.Show($"Incorrect! {results}");
+
                 EndGame();
+                Close();
             }
         }
     }
