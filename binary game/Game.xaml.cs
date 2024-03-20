@@ -333,7 +333,7 @@ namespace binary_game
             }
             else
             {
-                MessageBox.Show($"Incorrect! {results}");
+                MessageBox.Show("Incorrect!");
 
                 EndGame();
                 Close();
