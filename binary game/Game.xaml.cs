@@ -152,8 +152,6 @@ namespace binary_game
 
             leaderboardEntries.Add($"{playerName},{score},{totalPlayTimeMinutes}m {remainingSeconds}s");
 
-            leaderboardEntries.Add($"{playerName},{score},{(30 - _sec)}");
-
 
             File.WriteAllLines(filePath, leaderboardEntries);
         }
